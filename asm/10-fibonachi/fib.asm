@@ -3,7 +3,6 @@ extern printf
 
 SECTION .data
     format: db 'fib[%d] = %d', 10, 0
-    current_fib_string: db 'current fib index = %d', 10, 0
 
 SECTION .bss
     index: resb 1
