@@ -9,12 +9,12 @@ SECTION .text
 
 _start:
     xor rdx, rdx
-    mov rax, 67
+    mov rax, 62
     mov rbx, 7
     div rbx
 
-    ; rdx - quotient
-    ; rax - remainder
+    ; rax - quotient
+    ; rdx - remainder
 
     mov rsi, rax
     mov rdi, format
