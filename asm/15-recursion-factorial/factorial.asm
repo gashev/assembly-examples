@@ -26,15 +26,12 @@ end:
     call exit
 
 factorial:
-    push rdi
-
     cmp rdi, 1
     jg prev_factorial
 
     mov rax, 1
 
 end_factorial:
-    pop rdi
     ret
 
 prev_factorial:
