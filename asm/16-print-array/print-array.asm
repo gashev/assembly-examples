@@ -2,8 +2,7 @@ extern exit
 extern printf
 
 SECTION .data
-    ;format: db '%d %d ', 0
-    format: db '%u ', 10, 0
+    format: db '%d', 10, 0
 
 SECTION .bss
     index: resb 4
