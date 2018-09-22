@@ -21,10 +21,14 @@ _start:
 loop:
     mov cl, [rbx]
     cmp cl, 0
-    je start_reverse_string
-    
+    je init_reverse_string
+
     inc rbx
     jmp loop
+
+init_reverse_string:
+    dec rbx
+    jmp reverse_string
 
 finish:
     ; Print string.
@@ -36,14 +40,15 @@ finish:
     mov rdi, 0
     call exit
 
-start_reverse_string:
-    dec rbx
+reverse_string:
     cmp rax, rbx
     jge finish
+
     mov cl, [rax]
     mov dl, [rbx]
-
     mov [rax], dl
     mov [rbx], cl
+
     inc rax
-    jmp start_reverse_string 
+    dec rbx
+    jmp reverse_string
