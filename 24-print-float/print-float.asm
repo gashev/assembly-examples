@@ -9,8 +9,7 @@ SECTION .text
     GLOBAL _start
 
 _start:
-    movq xmm0, qword [number]   ; first floating point in fmt
-
+    movq xmm0, qword [number]   ; floating point in str
     mov rdi, str                ; address of format string
     mov rax, 1                  ; 1 floating point arguments to printf
     call printf                 ; Call C function
