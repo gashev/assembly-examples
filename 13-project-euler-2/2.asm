@@ -37,7 +37,7 @@ loop: ; Start loop.
     mov rsi, [fib2]
     cmp rsi, 4000000
     jge finish
-bbb:
+
     ; Check is value is even.
     test rsi, 1
     je add_num
